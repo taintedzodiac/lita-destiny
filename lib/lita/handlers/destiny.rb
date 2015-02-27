@@ -6,7 +6,7 @@ module Lita
       })
 
       def destiny(response)
-        params = response.matches[0][0]
+        params = response.matches[0][0].split
         params.each do |param|
           response.reply param
         end
