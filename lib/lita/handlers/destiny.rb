@@ -6,10 +6,15 @@ module Lita
       })
 
       def destiny(response)
+        # params order: console, username
         params = response.matches[0][0].split
-        params.each do |param|
-          response.reply param
-        end
+
+        console = params[0].to_sym
+        gamertag = params[1]
+
+        destiny_client = Destiny.new({ console: console })
+        membership = destiny_client.memberships.get(gamertag)
+        response.reply membership.inspect
       end
     end
 
