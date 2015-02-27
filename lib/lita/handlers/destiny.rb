@@ -12,7 +12,7 @@ module Lita
         console = params[0].to_sym
         gamertag = params[1]
 
-        destiny_client = Destiny.new({ console: console })
+        destiny_client = Destiny.new
         # membership = destiny_client.memberships.get(gamertag)
         response.reply destiny_client.inspect
       end
