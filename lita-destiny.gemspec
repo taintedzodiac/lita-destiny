@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Rob Zimmerman"]
   spec.email         = ["taintedz@gmail.com"]
   spec.description   = "A Lita handler for the Destiny API."
-  spec.summary       = "TODO: Add a summary"
+  spec.summary       = "A Lita handler for the Destiny API."
   spec.homepage      = "https://www.github.com/taintedzodiac/lita-destiny"
   spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
