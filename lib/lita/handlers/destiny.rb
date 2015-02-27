@@ -1,12 +1,15 @@
 module Lita
   module Handlers
     class Destiny < Handler
-      route(/^echo\s+(.+)/, :echo, command: true, help: {
-        "echo TEXT" => "Replies back with TEXT."
+      route(/^destiny\s+(.+)/, :destiny, command: true, help: {
+        "destiny" => "Query Destiny API."
       })
 
-      def echo(response)
-        response.reply response.matches
+      def destiny(response)
+        params = response.matches.split[' ']
+        params.each do |param|
+          response.reply param
+        end
       end
     end
 
